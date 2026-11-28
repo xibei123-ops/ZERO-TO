@@ -14,6 +14,7 @@ import "../css/nav.css";
 import "../css/cards.css";
 import "../css/lab.css";
 import "../css/responsive.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "zero to tech",
@@ -33,6 +34,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="zh-CN">
       <body>
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+window.gtag = function gtag(){window.dataLayer.push(arguments);};
+window.gtag('js', new Date());`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NLXCRD24"
+          strategy="afterInteractive"
+        />
         <div className="app-shell">
           <div className="page-shell">
             <main className="page-content">{children}</main>

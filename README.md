@@ -152,11 +152,9 @@ sudo nginx -t && sudo systemctl reload nginx
 
 **8. 验证**
 
-```bash
-curl localhost/api/profile        # 服务器本机，注意不带端口
-```
+浏览器访问 `https://example.com`，地址栏不再标"不安全"；再敲 `http://` 开头的，应该自动跳到 `https://`。做一次分析、看一眼历史记录。
 
-浏览器访问 `http://服务器IP`，做一次分析、看一眼历史记录。换个无痕窗口再试，两边的历史应该互相看不到。
+```
 
 ## 日常发布
 
