@@ -1,0 +1,86 @@
+# robots.txt for lifelongleaning.site
+# 规则一：所有爬虫不得访问 /api/ 下的接口
+# 规则二：谢绝任何大模型（GPT / Claude 等）使用本站内容做训练
+
+# ---------- 1. 通用规则：任何爬虫都别碰接口 ----------
+User-agent: *
+Disallow: /api/
+
+# ---------- 2. 禁止 AI 训练类爬虫抓取全站 ----------
+# 原则：这些 UA 一律 Disallow: /，全站不提供，自然也包括 /api/
+
+# OpenAI
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Claude-SearchBot
+Disallow: /
+
+# Google 的 AI 训练爬虫（只影响 Gemini 训练，不影响 Google 搜索收录）
+User-agent: Google-Extended
+Disallow: /
+
+# 其他常见的大模型 / 数据集爬虫
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: PanguBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

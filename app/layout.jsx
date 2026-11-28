@@ -18,6 +18,15 @@ import "../css/responsive.css";
 export const metadata = {
   title: "zero to tech",
   description: "个人主页 + 文字实验室",
+  // 图标都在 public/ 下，构建时原样拷进 out/，这里只负责在 HTML 里写对 <link>
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 export default function RootLayout({ children }) {
